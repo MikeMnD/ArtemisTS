@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{D78C8C6C-BDC7-48AB-A4D4-C5E1012BA763}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="index.htm" />
+    <Content Include="src\app.js">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app.min.js">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="src\core\Aspect.ts" />
+    <Content Include="src\core\Aspect.js">
+      <DependentUpon>Aspect.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Aspect.min.js">
+      <DependentUpon>Aspect.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Component.js">
+      <DependentUpon>Component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Component.min.js">
+      <DependentUpon>Component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Component.ts" />
+    <Content Include="src\core\ComponentManager.js">
+      <DependentUpon>ComponentManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentManager.min.js">
+      <DependentUpon>ComponentManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentManager.ts" />
+    <Content Include="src\core\ComponentMapper.js">
+      <DependentUpon>ComponentMapper.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentMapper.min.js">
+      <DependentUpon>ComponentMapper.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentMapper.ts" />
+    <Content Include="src\core\ComponentType.js">
+      <DependentUpon>ComponentType.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentType.min.js">
+      <DependentUpon>ComponentType.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentType.ts" />
+    <TypeScriptCompile Include="src\core\managers\TagManager.ts" />
+    <TypeScriptCompile Include="src\core\managers\PlayerManager.ts" />
+    <TypeScriptCompile Include="src\core\managers\GroupManager.ts" />
+    <Content Include="src\core\managers\GroupManager.js">
+      <DependentUpon>GroupManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\GroupManager.min.js">
+      <DependentUpon>GroupManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\PlayerManager.js">
+      <DependentUpon>PlayerManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\PlayerManager.min.js">
+      <DependentUpon>PlayerManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\TagManager.js">
+      <DependentUpon>TagManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\TagManager.min.js">
+      <DependentUpon>TagManager.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="src\core\managers\TeamManager.ts" />
+    <Content Include="src\core\managers\TeamManager.js">
+      <DependentUpon>TeamManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\TeamManager.min.js">
+      <DependentUpon>TeamManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntityProcessingSystem.js">
+      <DependentUpon>DelayedEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntityProcessingSystem.min.js">
+      <DependentUpon>DelayedEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntityProcessingSystem.ts" />
+    <Content Include="src\core\systems\DelayedEntitySystem.js">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntitySystem.min.js">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="src\core\systems\EntityProcessingSystem.ts" />
+    <Content Include="src\core\systems\EntityProcessingSystem.js">
+      <DependentUpon>EntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\EntityProcessingSystem.min.js">
+      <DependentUpon>EntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntityProcessingSystem.js">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntityProcessingSystem.min.js">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntityProcessingSystem.ts" />
+    <Content Include="src\core\dts\lib.d.ts" />
+    <Content Include="src\core\dts\node.d.ts" />
+    <Content Include="src\core\dts\require.d.ts" />
+    <Content Include="src\core\dts\underscore-int.d.ts" />
+    <Content Include="src\core\dts\underscore.d.ts" />
+    <Content Include="src\core\dts\webgl.d.ts" />
+    <Content Include="src\core\dts\xlib.d.ts" />
+    <Content Include="src\core\Entity.js">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Entity.min.js">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Entity.ts" />
+    <Content Include="src\core\EntityManager.js">
+      <DependentUpon>EntityManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\EntityManager.min.js">
+      <DependentUpon>EntityManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\EntityManager.ts" />
+    <TypeScriptCompile Include="src\core\EntitySystem.ts" />
+    <Content Include="src\core\EntitySystem.js">
+      <DependentUpon>EntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\EntitySystem.min.js">
+      <DependentUpon>EntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Manager.js">
+      <DependentUpon>Manager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Manager.min.js">
+      <DependentUpon>Manager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Manager.ts" />
+    <TypeScriptCompile Include="src\core\systems\VoidEntitySystem.ts" />
+    <TypeScriptCompile Include="src\core\systems\IntervalEntitySystem.ts" />
+    <Content Include="src\core\systems\IntervalEntitySystem.js">
+      <DependentUpon>IntervalEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntitySystem.min.js">
+      <DependentUpon>IntervalEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\VoidEntitySystem.js">
+      <DependentUpon>VoidEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\VoidEntitySystem.min.js">
+      <DependentUpon>VoidEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Bag.js">
+      <DependentUpon>Bag.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Bag.min.js">
+      <DependentUpon>Bag.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Bag.ts" />
+    <TypeScriptCompile Include="src\core\utils\Hashmap.ts" />
+    <TypeScriptCompile Include="src\core\utils\BitSet.ts" />
+    <Content Include="src\core\utils\BitSet.js">
+      <DependentUpon>BitSet.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\BitSet.min.js">
+      <DependentUpon>BitSet.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Dictionary.js">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Dictionary.min.js">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\FastMath.js">
+      <DependentUpon>FastMath.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\FastMath.min.js">
+      <DependentUpon>FastMath.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\FastMath.ts" />
+    <TypeScriptCompile Include="src\core\utils\List.ts" />
+    <Content Include="src\core\utils\Hashmap.js">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Hashmap.min.js">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\List.js">
+      <DependentUpon>List.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\List.min.js">
+      <DependentUpon>List.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Logger.js">
+      <DependentUpon>Logger.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Logger.min.js">
+      <DependentUpon>Logger.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Logger.ts" />
+    <Content Include="src\core\utils\Timer.js">
+      <DependentUpon>Timer.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Timer.min.js">
+      <DependentUpon>Timer.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Timer.ts" />
+    <Content Include="src\core\utils\Utils.js">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Utils.min.js">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Utils.ts" />
+    <Content Include="src\core\utils\XArray.js">
+      <DependentUpon>XArray.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\XArray.min.js">
+      <DependentUpon>XArray.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\XArray.ts" />
+    <Content Include="src\core\World.js">
+      <DependentUpon>World.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\World.min.js">
+      <DependentUpon>World.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\World.ts" />
+    <Content Include="src\dts\lib.d.ts" />
+    <Content Include="src\dts\node.d.ts" />
+    <Content Include="src\dts\require.d.ts" />
+    <Content Include="src\dts\webgl.d.ts" />
+    <Content Include="src\dts\xlib.d.ts" />
+    <Content Include="src\Game.js">
+      <DependentUpon>Game.ts</DependentUpon>
+    </Content>
+    <Content Include="src\Game.min.js">
+      <DependentUpon>Game.ts</DependentUpon>
+    </Content>
+    <Content Include="src\Game.ts" />
+    <Content Include="src\libs\dat.gui\dat.color.js" />
+    <Content Include="src\libs\dat.gui\dat.color.min.js" />
+    <Content Include="src\libs\dat.gui\dat.gui.d.ts" />
+    <Content Include="src\libs\dat.gui\dat.gui.js" />
+    <Content Include="src\libs\dat.gui\dat.gui.min.js" />
+    <Content Include="src\libs\domReady.js" />
+    <Content Include="src\libs\jquery\jquery-1.9.1.js" />
+    <Content Include="src\libs\jquery\jquery-int.d.ts" />
+    <Content Include="src\libs\jquery\jquery.d.ts" />
+    <Content Include="src\libs\jquery\jquery.js" />
+    <Content Include="src\libs\require.js" />
+    <Content Include="src\dts\underscore-int.d.ts" />
+    <Content Include="src\dts\underscore.d.ts" />
+    <Content Include="src\libs\underscore.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\App.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\public\systems\MovementSystem.ts" />
+    <Content Include="src\public\systems\MovementSystem.js">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\public\systems\MovementSystem.min.js">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="web.config" />
+    <Content Include="src\Game.js.map">
+      <DependentUpon>Game.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app.js.map">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Component.js.map">
+      <DependentUpon>Component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentManager.js.map">
+      <DependentUpon>ComponentManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentMapper.js.map">
+      <DependentUpon>ComponentMapper.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\ComponentType.js.map">
+      <DependentUpon>ComponentType.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntityProcessingSystem.js.map">
+      <DependentUpon>DelayedEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Entity.js.map">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\EntityManager.js.map">
+      <DependentUpon>EntityManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Manager.js.map">
+      <DependentUpon>Manager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\World.js.map">
+      <DependentUpon>World.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\DelayedEntitySystem.js.map">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Bag.js.map">
+      <DependentUpon>Bag.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\Aspect.js.map">
+      <DependentUpon>Aspect.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\FastMath.js.map">
+      <DependentUpon>FastMath.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\List.js.map">
+      <DependentUpon>List.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Dictionary.js.map">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\BitSet.js.map">
+      <DependentUpon>BitSet.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Utils.js.map">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Hashmap.js.map">
+      <DependentUpon>Hashmap.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Timer.js.map">
+      <DependentUpon>Timer.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\XArray.js.map">
+      <DependentUpon>XArray.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\utils\Logger.js.map">
+      <DependentUpon>Logger.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\EntitySystem.js.map">
+      <DependentUpon>EntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\public\systems\MovementSystem.js.map">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\VoidEntitySystem.js.map">
+      <DependentUpon>VoidEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntitySystem.js.map">
+      <DependentUpon>IntervalEntitySystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\IntervalEntityProcessingSystem.js.map">
+      <DependentUpon>IntervalEntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\systems\EntityProcessingSystem.js.map">
+      <DependentUpon>EntityProcessingSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\TagManager.js.map">
+      <DependentUpon>TagManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\PlayerManager.js.map">
+      <DependentUpon>PlayerManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\TeamManager.js.map">
+      <DependentUpon>TeamManager.ts</DependentUpon>
+    </Content>
+    <Content Include="src\core\managers\GroupManager.js.map">
+      <DependentUpon>GroupManager.ts</DependentUpon>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\annotations\" />
+    <Folder Include="src\core\annotations\" />
+    <Folder Include="src\public\managers\" />
+    <Folder Include="src\public\utils\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>ArtemisTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61349</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60713/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5 --module AMD</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5 --module AMD</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>

@@ -1,0 +1,5 @@
+D:\xampp\htdocs\ArtemisTS\ArtemisTS\obj\Debug\ArtemisTS.dll
+D:\xampp\htdocs\ArtemisTS\ArtemisTS\obj\Debug\ArtemisTS.pdb
+D:\xampp\htdocs\ArtemisTS\ArtemisTS\bin\ArtemisTS.dll
+D:\xampp\htdocs\ArtemisTS\ArtemisTS\bin\ArtemisTS.pdb
+D:\xampp\htdocs\ArtemisTS\ArtemisTS\obj\Debug\ArtemisTS.csprojResolveAssemblyReference.cache
